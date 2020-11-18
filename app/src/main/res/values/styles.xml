@@ -16,4 +16,33 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- My Styles -->
+    <style name="Solid_Button">
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="Hollow_Button" parent="@style/Solid_Button">
+        <item name="android:background">@drawable/hollow_rounded_corners</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="clickableText">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="text">
+        <item name="android:textSize">18dp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+    <style name="bigText" parent="@style/text">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
 </resources>

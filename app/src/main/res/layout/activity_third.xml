@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!--Guidelines-->
@@ -41,7 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/component_6" />
+        android:src="@drawable/component_6"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-50dp" />
 
     <ImageView
         android:id="@+id/group_14"
@@ -56,7 +59,7 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/group_215"
+        android:src="@drawable/group_208"
         app:layout_constraintBottom_toBottomOf="@id/group_14"
         app:layout_constraintEnd_toEndOf="@id/group_14"
         app:layout_constraintStart_toStartOf="@id/group_14"
@@ -67,8 +70,8 @@
         style="@style/bigText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registration"
-        android:textSize="27dp"
+        android:layout_marginTop="16dp"
+        android:text="Verification"
         app:layout_constraintBottom_toTopOf="@+id/messageTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,7 +84,8 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Enter Your Mobile Number To Receive a Verification Code"
+        android:text="Enter A 4 Digit Number That
+ Was Sent To + (1) 555 678 2810"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,33 +107,68 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="32dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="32dp"
-                android:background="@drawable/solid_stroke_textview"
-                android:padding="10dp"
-                android:drawableStart="@drawable/flag"
-                android:drawableEnd="@drawable/path_471"
-                android:inputType="phone"
-                android:gravity="center_horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/hoorayButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:inputType="number"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:inputType="number"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:inputType="number"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:inputType="number"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/path_471"/>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/hoorayButton"
                 style="@style/Solid_Button"
+
                 android:layout_marginBottom="8dp"
-                android:text="Get Code"
+                android:text="Verify"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        style="@style/clickableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re-Send Code in 0:59"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
